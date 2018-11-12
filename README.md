@@ -5,6 +5,15 @@ Include all my linux configuration files, like i3, zsh, vim and so on. Will add 
 Linux distribution: **ArchLinux** or **Manjaro**  
 Arch: 64bit
 
+## Fonts
+
+To make the VIM, tmux and terminal beautiful, [powerline-fonts](https://github.com/powerline/fonts) is necessary.  
+
+In Arch or Manjaro, just install with below command:  
+```shell
+yaourt -S powerline powerline-fonts
+```
+
 ## VIM configuration
 
 Personal VIM configuration for VIM8.1, tested under CentOS environment.
