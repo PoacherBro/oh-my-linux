@@ -27,6 +27,11 @@ set nowrap
 set showmode
 set smarttab
 
+" add Powerline
+set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+
 " set gotags
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
