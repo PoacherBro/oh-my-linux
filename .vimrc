@@ -61,3 +61,5 @@ let g:tagbar_type_go = {
 	\ 'ctagsargs' : '-sort -silent'
 	\ }
 
+set background=dark
+colorscheme gruvbox
