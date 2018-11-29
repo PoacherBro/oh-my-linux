@@ -4,6 +4,7 @@
 [credential]
 	helper = /usr/share/git/credential/libsecret/git-credential-libsecret
 [alias]
+    # short convertion
     co  = checkout       # Checkout a branch
     cob = checkout -b    # Checkout a new not yet existing branch
     f   = fetch -p       # Fetch from a repository and prune any remote-tracking references that no longer exist on the remote.
@@ -15,8 +16,11 @@
     dc  = diff --cached  # Display the staged changes
     st  = status -sb
     a   = add -p
+    rh  = reset --hard
+
+    # complex alias
     plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    tlog = log --stat --since='7 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+    tlog = log --stat --since='7 Day Ago' --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     rank = shortlog -sn --no-merges
     bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
