@@ -8,6 +8,12 @@ Arch: 64bit
 ## Fonts
 
 To make the VIM, tmux and terminal beautiful, [powerline-fonts](https://github.com/powerline/fonts) is necessary.  
+But pls note, I follow the configuration instruction in [powerline inline doc](https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html#bash-prompt), 
+there is a problem when add below command:  
+```sh
+source /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+```
+It is ok to see the powerline symbols when don't add above one.  
 
 In Arch or Manjaro, just install with below command:  
 ```shell
