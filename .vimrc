@@ -15,6 +15,7 @@ Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'fatih/vim-go'
 Plugin 'taglist.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
