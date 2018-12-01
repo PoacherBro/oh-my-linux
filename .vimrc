@@ -67,6 +67,7 @@ let g:tagbar_type_go = {
 
 set background=dark
 colorscheme gruvbox
+let g:airline_powerline_fonts = 1
 
 " key bindings for ctrlp-funky
 nnoremap <Leader>fu :CtrlPFunky<Cr>
