@@ -1,27 +1,29 @@
 set nu
 set nocompatible
-syntax on
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'fatih/vim-go'
-Plugin 'taglist.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+call plug#begin('~/.vim/bundle')
 
-call vundle#end()
+Plug 'VundleVim/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe'
+Plug 'flazz/vim-colorschemes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'fatih/vim-go'
+Plug 'vim-scripts/taglist.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-filetype plugin indent on
+call plug#end()
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
