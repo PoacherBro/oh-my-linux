@@ -10,17 +10,18 @@
     f   = fetch -p       # Fetch from a repository and prune any remote-tracking references that no longer exist on the remote.
     c   = commit         # Commit you changes
     cm  = commit -m
-    p   = pull
-    pa  = pull --all
-    P   = push           # Push you changes to a remote
-    Pf  = push -f
+    pl  = pull
+    pla = pull --all
+    p   = push           # Push you changes to a remote
+    pf  = push -f
     b   = branch
     ba  = branch -a      # List both remote-tracking branches and local branches.
     bd  = branch -d      # Delete a branch only if it has been merged
     bD  = branch -D      # Force delete a branch
     dc  = diff --cached  # Display the staged changes
     st  = status -sb
-    a   = add -p
+    a   = add 
+	au  = add -u
     rh  = reset --hard
 
     # complex alias
