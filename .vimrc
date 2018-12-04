@@ -1,6 +1,7 @@
-set nu
-set nocompatible
+" change leader key
+let mapleader = ","
 
+" loaded vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -26,6 +27,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+set nu
+set nocompatible
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -41,6 +44,8 @@ set relativenumber
 set laststatus=2
 set t_Co=256
 
+" ============ vim-go setting ===============
+" follow https://github.com/fatih/vim-go-tutorial
 " set gotags
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
@@ -69,6 +74,45 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 	\ }
+" execute GoImports on save
+let g:go_fmt_command = "goimports"
+" auto check
+let g:go_metalinter_autosave = 1
+" beautify go file
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
+" identifier highlight
+" let g:go_auto_sameids = 1
+
+" jump between errors in quickfix
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+" execute go-build & go-run with shortkey
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>d :GoDecls<CR>
+autocmd FileType go nmap <leader>D :GoDeclsDir<CR>
+
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" =============== end vim-go setting =========
 
 set background=dark
 colorscheme gruvbox
