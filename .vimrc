@@ -113,23 +113,26 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 " =============== end vim-go setting =========
 
-nmap     <leader>f <Plug>CtrlSFPrompt
-vmap     <leader>f <Plug>CtrlSFVwordPath
-vmap     <leader>F <Plug>CtrlSFVwordExec
-nmap     <leader>n <Plug>CtrlSFCwordPath
-nmap     <leader>p <Plug>CtrlSFPwordPath
-nnoremap <leader>o :CtrlSFOpen<CR>
-nnoremap <leader>t :CtrlSFToggle<CR>
-inoremap <leader>t <Esc>:CtrlSFToggle<CR>
-
 set background=dark
 colorscheme gruvbox
 let g:airline_powerline_fonts = 1
 
+" ========= Find settings: ctrlp, funky, ctrlSF plugins =========
 " key bindings for ctrlp-funky
 nnoremap <leader>fu :CtrlPFunky<Cr>
+" S is super, search all in one time
+nnoremap <leader>fS :CtrlPMixed<Cr>
 " narrow the list down with a word under cursor
 nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+nmap     <leader>ff <Plug>CtrlSFPrompt
+vmap     <leader>ff <Plug>CtrlSFVwordPath
+vmap     <leader>fF <Plug>CtrlSFVwordExec
+nmap     <leader>fn <Plug>CtrlSFCwordPath
+nmap     <leader>fp <Plug>CtrlSFPwordPath
+nnoremap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>ft :CtrlSFToggle<CR>
+inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
+" ============== End Find settings ===========================
 
 let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
