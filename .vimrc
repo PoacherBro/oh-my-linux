@@ -41,6 +41,8 @@ set showmode
 set smarttab
 set relativenumber
 
+let NERDTreeQuitOnOpen=1
+
 " add Powerline
 "set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim/
 set laststatus=2
@@ -88,9 +90,13 @@ let g:go_highlight_types = 1
 " let g:go_auto_sameids = 1
 
 " jump between errors in quickfix
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
+map <leader>qn :cnext<CR>
+map <leader>qp :cprevious<CR>
+nnoremap <leader>qc :cclose<CR>
+
+map <leader>ln :lnext<CR>
+map <leader>lp :lprevious<CR>
+nnoremap <leader>lc :lclose<CR>
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -138,3 +144,4 @@ inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
+let g:ctrlp_extensions = ['funky']
