@@ -28,6 +28,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+
 set nu
 set nocompatible
 set tabstop=4
@@ -96,6 +98,10 @@ nnoremap <leader>qc :cclose<CR>
 map <leader>ln :lnext<CR>
 map <leader>lp :lprevious<CR>
 nnoremap <leader>lc :lclose<CR>
+
+" use Ctrl-c to copy the text in system clipboard
+vnoremap <C-c> "+y
+nnoremap <C-v> "+p
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
