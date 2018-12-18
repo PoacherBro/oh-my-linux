@@ -37,6 +37,15 @@ Personal VIM configuration for VIM8.1, tested under CentOS environment.
 
 This configuration most foucus on Golang development.
 
+Pls be aware that to use the system clipboard, VIM should be enabled with `+clipboard` option, you can use `vim --version` to check.  
+In ArchLinux, we can install the gVIM to replace the pre-installed VIM version: `yaourt -S gvim`.  
+
+Depended 3rd softwares:  
+```shell
+# ag & rg
+yaourt -S the_silver_searcher ripgrep
+```
+
 ## GIT
 
 Currently only add 3 sections: global user info, credential, alias.  
