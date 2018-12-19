@@ -30,3 +30,5 @@
     tlog = log --stat --since='7 Day Ago' --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     rank = shortlog -sn --no-merges
     bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
+[core]
+	editor = vim
