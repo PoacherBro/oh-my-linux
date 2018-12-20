@@ -1,5 +1,5 @@
 " change leader key
-let mapleader = ","
+let mapleader = ";"
 
 " loaded vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -102,6 +102,14 @@ nnoremap <leader>lc :lclose<CR>
 " use leader-c/v to copy the text in system clipboard
 vnoremap <leader>c "+y
 nnoremap <leader>v "+p
+
+" use Ctrl-j/k move line(s) up/down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
