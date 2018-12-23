@@ -17,7 +17,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'vim-scripts/taglist.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
@@ -55,7 +54,7 @@ set t_Co=256
 
 " ============ vim-go setting ===============
 " follow https://github.com/fatih/vim-go-tutorial
-" set gotags
+" set gotags, MUST set path ~/go/bin in $PATH as gotags is executable
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
 	\ 'kinds'     : [
