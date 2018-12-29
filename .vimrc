@@ -132,6 +132,8 @@ autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>D :GoDeclsDir<CR>
 autocmd FileType go nmap <leader>g :GoReferrers<CR>
+autocmd FileType go nmap <leader>i <C-]>
+autocmd FileType go nmap <leader>o <C-t>
 
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
