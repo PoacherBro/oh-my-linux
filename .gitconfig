@@ -33,3 +33,13 @@
 [core]
 	editor = vim
 	quotepath = false
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[diff]
+	tool = vimdiff
+	guitool = meld
+[merge]
+	tool = meld
