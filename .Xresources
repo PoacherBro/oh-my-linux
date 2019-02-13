@@ -7,13 +7,13 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 #define fonts   \
-                xft:DejaVu Sans Mono:size=13,\
-                xft:Source Code Pro:size=11,\
-                xft:Noto Color Emoji,\
                 xft:Meslo LG M DZ:size=11,\
+                xft:Source Code Pro:size=11,\
+                xft:DejaVu Sans Mono:size=11,\
+                xft:Noto Color Emoji,\
                 xft:Noto Sans Mono:size=11, \
-				xft:Source Han Sans CN:size=11, \
-				xft:PowerlineSymbols 
+                xft:Source Han Sans CN:size=11, \
+                xft:PowerlineSymbols 
 
 !! copy from gruvbox github
 URxvt.color24:  #076678
