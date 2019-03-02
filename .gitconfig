@@ -22,6 +22,7 @@
     st  = status -sb
     a   = add 
 	au  = add -u
+	aa  = add -A
     rh  = reset --hard
 
     # complex alias
