@@ -81,6 +81,11 @@ bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+l exec i3lock -c 000000 # lock screen with black
 
+# For touchpad
+exec xinput set-prop --type=int --format=8 "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+exec xinput set-prop --type=int --format=8 "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+exec libinput-gestures-setup start 
+
 # focus_follows_mouse no
 
 # change focus
@@ -154,12 +159,13 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 "1:  "
 set $ws2 "2:  "
-set $ws3 "3:  "
+set $ws3 "3: "
 set $ws4 "4:  "
 set $ws5 "5:  "
 set $ws6 "6:  "
-set $ws7 "7:  "
-set $ws8 8
+# set $ws7 "7:  "
+set $ws7 "7: "
+set $ws8 "8: " 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
