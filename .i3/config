@@ -83,7 +83,6 @@ bindsym $mod+l exec i3lock -c 000000 # lock screen with black
 
 # For touchpad
 exec xinput set-prop --type=int --format=8 "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-exec xinput set-prop --type=int --format=8 "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 exec libinput-gestures-setup start 
 
 # focus_follows_mouse no

@@ -31,6 +31,13 @@ I just follow this [post](https://unix.stackexchange.com/questions/372447/reload
 2. [Linux下终极字体配置方案](https://ohmyarch.github.io/2017/01/15/Linux%E4%B8%8B%E7%BB%88%E6%9E%81%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/)  
 
 
+Suggested fonts:  
+```sh
+yaourt -S otf-fira-code otf-font-awesome ttf-dejavu ttf-droid ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+```
+
+Note that `noto-fonts` and `source-han-fonts` look are same because all of them are created/designed by Google and Adobe, but the `source-han-fonts` is the upgraded one.
+
 ## VIM configuration
 
 Personal VIM configuration for VIM8.1, tested under CentOS environment.
