@@ -33,7 +33,7 @@ I just follow this [post](https://unix.stackexchange.com/questions/372447/reload
 
 Suggested fonts:  
 ```sh
-yaourt -S otf-fira-code otf-font-awesome ttf-dejavu ttf-droid ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+yaourt -S otf-fira-code otf-fira-mono awesome-terminal otf-font-awesome ttf-dejavu ttf-droid ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
 ```
 
 Note that `noto-fonts` and `source-han-fonts` look are same because all of them are created/designed by Google and Adobe, but the `source-han-fonts` is the upgraded one.
@@ -67,6 +67,20 @@ And there is a suggested configuration, see it in `system/touchpad/30-touchpad.c
 ```sh
 sudo ln -s ~/github/oh-my-linux/system/touchpad/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
+
+## Softwares
+
+- git  
+- zsh + oh-my-zsh  
+- flameshot, for screeshot  
+- alacritty, GPU-accessed terminal  
+- google-chrome  
+- gvim, as VIM has no clipboard option  
+- visual-studio-code-bin, awesome code editor  
+- clipit + xclip, clip manager  
+- fzf, the shortkey of `z`  
+- tmux, awesome resue tool of terminal  
+
 
 ## References
 
