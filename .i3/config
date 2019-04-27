@@ -83,7 +83,7 @@ bindsym $mod+l exec i3lock -c 000000 # lock screen with black
 
 # For touchpad
 exec xinput set-prop --type=int --format=8 "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-exec libinput-gestures-setup start 
+exec --no-startup-id libinput-gestures-setup start 
 
 # focus_follows_mouse no
 
@@ -303,6 +303,7 @@ exec --no-startup-id fcitx
 exec --no-startup-id powerline-daemon -q
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec --no-startup-id ibus-daemon
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
