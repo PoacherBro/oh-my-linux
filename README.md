@@ -60,6 +60,14 @@ Currently only add 3 sections: global user info, credential, alias.
 For GIT, I mainly focus on `git log` command which can make so beautiful & readable, until I find a good tool [tig](https://github.com/jonas/tig).  
 In Arch, you can install it by `yaourt -S tig`. It is awesome, suggested to try.
 
+## Touchpad
+
+When use i3, the tapping in touchpad is not enabled defaultly, based on ArchLinux wiki, suggested to use [libinput](https://wiki.archlinux.org/index.php/Libinput) to controll the input device (include keyboard).  
+And there is a suggested configuration, see it in `system/touchpad/30-touchpad.conf`, only add 3 options in the **touchpad catchall**, this file is copied from `/usr/share/X11/xorg.conf.d` and should put it in `/etc/X11/xorg.conf.d`.  
+```sh
+sudo ln -s ~/github/oh-my-linux/system/touchpad/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+
 ## References
 
 1. [GitHub - maximbaz/dotfiles](https://github.com/maximbaz/dotfiles)  
