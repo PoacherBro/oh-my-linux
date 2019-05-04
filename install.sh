@@ -18,7 +18,7 @@ sudo pacman -S visual-studio-code-bin google-chrome
 sudo pacman -S arc-solid-gtk-theme arc-gtk-theme paper-icon-theme
 
 # for i3 software
-sudo pacman -S compton feh xautolock dunst
+sudo pacman -S compton feh xautolock dunst volumeicon light
 
 # for audio control & driver
 sudo pacman -S pulseaudio pulseaudio-alsa pasystray pavucontrol paprefs
