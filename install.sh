@@ -18,7 +18,7 @@ sudo pacman -S visual-studio-code-bin google-chrome
 sudo pacman -S arc-solid-gtk-theme arc-gtk-theme paper-icon-theme
 
 # for i3 software
-sudo pacman -S compton feh xautolock 
+sudo pacman -S compton feh xautolock dunst
 
 # for audio control & driver
 sudo pacman -S pulseaudio pulseaudio-alsa pasystray pavucontrol paprefs
@@ -28,6 +28,11 @@ sudo ln -sf $PWD/system/touchpad/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchp
 
 # input method
 sudo pacman -S ibus-rime
+
+# config i3 notification
+mkdir ~/.config/dunst
+ln -s $PWD/.config/dunst/dunstrc ~/.config/dunst/dunstrc
+systemctl --user enable dunst
 
 # config git libsecret, which is for username/password storage
 cd /usr/share/git/credential/libsecret
