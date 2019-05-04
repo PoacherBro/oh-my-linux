@@ -29,6 +29,11 @@ sudo ln -sf $PWD/system/touchpad/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchp
 # input method
 sudo pacman -S ibus-rime
 
+# config git libsecret, which is for username/password storage
+cd /usr/share/git/credential/libsecret
+sudo make
+cd -
+
 # install oh-my-zsh and change to default zsh
 cd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -61,3 +66,6 @@ ln -sf $PWD/.tmux.conf ~/.tmux.conf
 # install vim plugins
 sudo pacman -S cmake 
 ln -sf $PWD/.vimrc ~/.vimrc
+
+mkdir -p ~/.config/Code/User
+cp -f $PWD/.config/Code/User/settings.json ~/.config/Code/User/
