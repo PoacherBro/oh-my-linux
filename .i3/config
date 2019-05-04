@@ -25,7 +25,7 @@ bindsym $mod+n border normal
 # font xft:DejVu Sans 11
 # font xft:Noto Sans 11
 # font pango:Source Han Sans CN, Meslo LG M DZ, Noto Sans, DejaVu Sans, Source Han Sans CN 12
-font pango: Source Hans Sans CN 12
+font pango: monospace 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
