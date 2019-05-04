@@ -1,0 +1,8 @@
+{
+    "go.gopath": "~/work/go",
+    "editor.fontFamily": "'Fira Code', 'Source Han Sans CN', PowerlineSymbols, FontAwesome",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "terminal.integrated.fontFamily": "'DejaVu Sans Mono', 'Source Han Sans CN', PowerlineSymbols, FontAwesome",
+    "terminal.integrated.fontSize": 16
+}
