@@ -18,10 +18,10 @@ sudo pacman -S visual-studio-code-bin google-chrome
 sudo pacman -S arc-solid-gtk-theme arc-gtk-theme paper-icon-theme
 
 # for i3 software
-sudo pacman -S compton feh xautolock dunst volumeicon light
+sudo pacman -S compton feh xautolock dunst light
 
 # for audio control & driver
-sudo pacman -S pulseaudio pulseaudio-alsa pasystray pavucontrol paprefs
+sudo pacman -S pulseaudio pulseaudio-alsa alsa-utils alsa-firmware volumeicon pavucontrol paprefs
 
 # config touchpad
 sudo ln -sf $PWD/system/touchpad/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
