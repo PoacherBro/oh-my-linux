@@ -87,4 +87,5 @@ sudo ln -s ~/github/oh-my-linux/system/touchpad/30-touchpad.conf /etc/X11/xorg.c
 1. [GitHub - maximbaz/dotfiles](https://github.com/maximbaz/dotfiles)  
 2. [GitHub - Airblader/i3](https://github.com/Airblader/i3)  
 3. [GitHub - samrayleung/dotfiles](https://github.com/samrayleung/dotfiles)  
+4. [GitHub - addy-dclxvi/i3-starterpack](https://github.com/addy-dclxvi/i3-starterpack)  
 
