@@ -31,8 +31,12 @@ sudo pacman -S ibus-rime
 
 # config i3 notification
 mkdir ~/.config/dunst
-ln -s $PWD/.config/dunst/dunstrc ~/.config/dunst/dunstrc
+ln -sf $PWD/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 systemctl --user enable dunst
+
+# config volumeicon
+mkdir ~/.config/volumeicon
+ln -sf $PWD/.config/volumeicon/volumeicon ~/.config/volumeicon/
 
 # config git libsecret, which is for username/password storage
 cd /usr/share/git/credential/libsecret
