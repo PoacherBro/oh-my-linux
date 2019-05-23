@@ -52,6 +52,7 @@ Depended 3rd softwares:
 # ag & rg
 yaourt -S the_silver_searcher ripgrep
 ```
+Refer to [GitHub - vim-go IDE](https://github.com/BroQiang/vim-go-ide) for configuration.
 
 ## GIT
 
