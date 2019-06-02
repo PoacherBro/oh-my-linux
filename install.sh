@@ -73,7 +73,7 @@ ln -sf $PWD/.gitconfig ~/.gitconfig
 ln -sf $PWD/.tmux.conf ~/.tmux.conf
 
 # install vim plugins
-sudo pacman -S cmake 
+sudo pacman -S cmake ctags
 ln -sf $PWD/.vimrc ~/.vimrc
 
 mkdir -p ~/.config/Code/User
