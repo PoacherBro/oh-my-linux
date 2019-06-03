@@ -4,7 +4,7 @@
 sudo pacman -S ttf-dejavu otf-fira-code awesome-terminal-fonts otf-font-awesome ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts powerline powerline-fonts
 
 # softwares
-sudo pacman -S tmux git tig the_silver_searcher ripgrep fzf flameshot zsh
+sudo pacman -S tmux git tig the_silver_searcher ripgrep fzf flameshot zsh freerdp
 
 # in archlinuxcn, pls set archlinuxcn in /etc/pacman.conf first
 sudo ln -sf $PWD/system/pacman.d/archlinuxcn /etc/pacman.d/archlinuxcn
