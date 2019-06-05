@@ -4,5 +4,10 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "terminal.integrated.fontFamily": "'DejaVu Sans Mono', 'Source Han Sans CN', PowerlineSymbols, FontAwesome",
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 18,
+    "workbench.colorTheme": "One Dark Pro",
+    "window.zoomLevel": 1,
+    "breadcrumbs.enabled": true,
+    "window.titleBarStyle": "custom",
+    "go.useLanguageServer": true
 }
