@@ -91,6 +91,8 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_types = 1
 let g:go_auto_type_info = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 " identifier highlight
 " let g:go_auto_sameids = 1
 
@@ -177,3 +179,17 @@ function! Multiple_cursors_after()
     call youcompleteme#EnableCursorMovedAutocommands()
 endfunction
 " }}}
+
+" auto create dir if not exist
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
