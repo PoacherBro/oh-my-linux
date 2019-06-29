@@ -1,3 +1,4 @@
+set encoding=utf-8
 " change leader key
 let mapleader = ";"
 
