@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
@@ -51,6 +51,9 @@ let NERDTreeQuitOnOpen=1
 "set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+
+" =========== YCM settings ==================
+set completeopt-=preview " disable preview
 
 " ============ vim-go setting ===============
 " follow https://github.com/fatih/vim-go-tutorial
@@ -151,7 +154,8 @@ let g:airline_powerline_fonts = 1
 " key bindings for ctrlp-funky
 nnoremap <leader>fu :CtrlPFunky<Cr>
 " S is super, search all in one time
-nnoremap <leader>fS :CtrlPMixed<Cr>
+noremap <leader>fS :CtrlPMixed<Cr>
+noremap <leader>fr :CtrlPBuffer<Cr>
 " narrow the list down with a word under cursor
 nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 nmap     <leader>ff <Plug>CtrlSFPrompt
