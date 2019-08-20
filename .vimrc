@@ -172,18 +172,6 @@ let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
 let g:ctrlp_extensions = ['funky']
 
-" as conflict with YouCompleteMe plugin when use insert mode, no response
-" refer to https://github.com/Valloric/YouCompleteMe/issues/662#issuecomment-253868258
-" vim-multiple-cursors Setup {{{
-function! Multiple_cursors_before()
-    call youcompleteme#DisableCursorMovedAutocommands()
-endfunction
-
-function! Multiple_cursors_after()
-    call youcompleteme#EnableCursorMovedAutocommands()
-endfunction
-" }}}
-
 " auto create dir if not exist
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
